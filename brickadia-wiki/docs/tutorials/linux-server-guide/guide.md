@@ -43,10 +43,11 @@ You will need:
 1. you should now be connected, and the server is up!
 
 ## Post-Setup Configuration Tips
-#### Enable auto-save.
+#### Enable Auto Save
 1. In your server console, type `BR.World.SaveAs savename` (where savename is what you want the name of your save to be). This will create your save file for the server. 
-      - Note: If you do not run this command, the autosave won't function.
-2. Connect to your server in game, press esc -> edit game
-3. Advanced settings toggle at the top left of the menu
-4. Scroll to the bottom and enable autosave. You can also configure save interval and announcing of the saves.
+      - Note: If you do not run this command, the Auto Save won't function.
+      - If you already created a save file for your server, you can skip this step.
+2. Connect to your server in game, press the escape key to open the menu -> edit game
+3. Click the advanced settings toggle at the top left of the menu
+4. Scroll to the bottom and enable Auto Save. You can also configure save interval and announcing of the saves.
 5. Whenever you restart your server, you will need to run `BR.World.Load savename` to have the server reload the save file.
