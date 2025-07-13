@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://brickadia-community-wiki.github.io/brickadiacommunitywiki/</loc>
+         <loc>https://brickadia-community.github.io/communitywiki/</loc>
          <lastmod>2025-07-13</lastmod>
     </url>
     <url>
-         <loc>https://brickadia-community-wiki.github.io/brickadiacommunitywiki/about/</loc>
+         <loc>https://brickadia-community.github.io/communitywiki/about/</loc>
          <lastmod>2025-07-13</lastmod>
     </url>
     <url>
-         <loc>https://brickadia-community-wiki.github.io/brickadiacommunitywiki/contributing/</loc>
+         <loc>https://brickadia-community.github.io/communitywiki/contributing/</loc>
          <lastmod>2025-07-13</lastmod>
     </url>
     <url>
-         <loc>https://brickadia-community-wiki.github.io/brickadiacommunitywiki/dedicated-servers/</loc>
+         <loc>https://brickadia-community.github.io/communitywiki/dedicated-servers/</loc>
          <lastmod>2025-07-13</lastmod>
     </url>
     <url>
-         <loc>https://brickadia-community-wiki.github.io/brickadiacommunitywiki/privacy-policy/</loc>
+         <loc>https://brickadia-community.github.io/communitywiki/privacy-policy/</loc>
          <lastmod>2025-07-13</lastmod>
     </url>
     <url>
-         <loc>https://brickadia-community-wiki.github.io/brickadiacommunitywiki/tutorials/linux-server-guide/guide/</loc>
+         <loc>https://brickadia-community.github.io/communitywiki/tutorials/linux-server-guide/guide/</loc>
          <lastmod>2025-07-13</lastmod>
     </url>
 </urlset>
