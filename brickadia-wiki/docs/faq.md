@@ -18,7 +18,9 @@ Finally, ensure that your firewall is not blocking the incoming connections.
 Make sure that your CPU supports AVX/AVX2. As a UE5 game, Brickadia explicitly requires this functionality on your CPU.
 
 ## Is there a list of console commands anywhere?
-Not officially, but you can press `` ` `` (the key usually located above tab on your keyboard) to open the console in game to see auto-completions.
+Not officially, but we are working to create one [here](dedicated-servers.md#dedicated-server-commands).
+
+You can also press `` ` `` (the key usually located above tab on your keyboard) to open the console in game to see auto-completions.
 Most of the commands available on the client are also available on the server console.
 
 ## How do I switch the base map?
