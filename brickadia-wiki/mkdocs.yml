@@ -38,6 +38,11 @@ theme:
         icon: material/lightbulb-outline
         name: Switch to Auto
 
+### Set up custom site analytics in the overrides/partials/integrations/analytics folder in custom.html
+extra:
+  analytics:
+    provider: custom
+
 ### MkDoc extension loading ###
 markdown_extensions:
   - attr_list
