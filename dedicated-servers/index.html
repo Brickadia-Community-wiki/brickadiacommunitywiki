@@ -668,6 +668,7 @@
 Instead, these are now downloaded either directly from steam or anonymously from <a href="https://developer.valvesoftware.com/wiki/SteamCMD">Steamcmd</a> using appid <code>3017590</code>.</p>
 <p>Note that you will still need to supply the dedicated server a server hosting token by passing it the <code>-token=yourtokenhere</code> executable argument. Once the token is registered to the server for the first time, the <code>-token</code> argument can be omitted in future runs of the server executable. </p>
 <p>Servers currently use <strong>udp port 7777</strong>. This can be changed if needed by supplying and modifying the <code>-port=7777</code> argument to your desired port. </p>
+<p>In some circumstances (such as hosting multiple servers on the same host) you may wish to change the location of the Dedicated Server's <code>Saved</code> directory (<code>~/.config/Epic/Brickadia/</code> by default). This can be done using the <code>-UserDir=PathToSavedDir</code> argument.</p>
 <h2 id="dedicated-server-commands">Dedicated Server Commands<a class="headerlink" href="#dedicated-server-commands" title="Permanent link">&para;</a></h2>
 <p>These commands can be used directly in the terminal where the dedicated server is running. </p>
 <table>
@@ -685,6 +686,10 @@ Instead, these are now downloaded either directly from steam or anonymously from
 <tr>
 <td>Load map from mapfile name</td>
 <td><code>BR.World.Load "map name"</code></td>
+</tr>
+<tr>
+<td>Get Server status</td>
+<td><code>Server.Status</code></td>
 </tr>
 </tbody>
 </table>
