@@ -12,13 +12,13 @@
         <meta name="author" content="Brickadia Community">
       
       
-        <link rel="canonical" href="https://brickadia-community.github.io/communitywiki/tutorials/linux-server-guide/guide/">
+        <link rel="canonical" href="https://brickadia-community.github.io/communitywiki/tutorials/windows-server-guide/guide/">
       
       
-        <link rel="prev" href="../../../dedicated-servers/">
+        <link rel="prev" href="../../linux-server-guide/guide/">
       
       
-        <link rel="next" href="../../windows-server-guide/guide/">
+        <link rel="next" href="../../../about/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -26,7 +26,7 @@
     
     
       
-        <title>Linux Dedicated Server Setup - Brickadia Community Wiki</title>
+        <title>Windows Dedicated Server Setup - Brickadia Community Wiki</title>
       
     
     
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#linux-dedicated-server-guide" class="md-skip">
+        <a href="#windows-dedicated-server-guide" class="md-skip">
           Skip to content
         </a>
       
@@ -113,7 +113,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Linux Dedicated Server Setup
+              Windows Dedicated Server Setup
             
           </span>
         </div>
@@ -417,6 +417,29 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../../linux-server-guide/guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Linux Dedicated Server Setup
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -434,7 +457,7 @@
   
   
   <span class="md-ellipsis">
-    Linux Dedicated Server Setup
+    Windows Dedicated Server Setup
     
   </span>
   
@@ -447,7 +470,7 @@
   
   
   <span class="md-ellipsis">
-    Linux Dedicated Server Setup
+    Windows Dedicated Server Setup
     
   </span>
   
@@ -479,9 +502,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#instructions" class="md-nav__link">
+  <a href="#steam-dedicated-server-method" class="md-nav__link">
     <span class="md-ellipsis">
-      Instructions
+      Steam Dedicated Server Method
     </span>
   </a>
   
@@ -515,29 +538,6 @@
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../windows-server-guide/guide/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Windows Dedicated Server Setup
-    
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -723,9 +723,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#instructions" class="md-nav__link">
+  <a href="#steam-dedicated-server-method" class="md-nav__link">
     <span class="md-ellipsis">
-      Instructions
+      Steam Dedicated Server Method
     </span>
   </a>
   
@@ -774,51 +774,53 @@
   
 
 
-<h1 id="linux-dedicated-server-guide">Linux Dedicated Server Guide<a class="headerlink" href="#linux-dedicated-server-guide" title="Permanent link">&para;</a></h1>
+<h1 id="windows-dedicated-server-guide">Windows Dedicated Server Guide<a class="headerlink" href="#windows-dedicated-server-guide" title="Permanent link">&para;</a></h1>
 <p>So you want to use a linux server but dont know where to start? This guide is for you.</p>
-<p><em>(Note for ARM server runners: You cannot currently use Box64 for ARM servers as the latest server version relies on features <a href="https://github.com/ptitSeb/box64/issues/2808">Box64 does not yet support</a>)</em></p>
 <h2 id="prereqs-steam-early-access-edition">Prereqs (Steam Early Access Edition)<a class="headerlink" href="#prereqs-steam-early-access-edition" title="Permanent link">&para;</a></h2>
 <p>You will need:</p>
 <ul>
-<li>a linux X86_64 VM with a recent CPU with 2-4 cores</li>
-<li>at least 6 GB of RAM. </li>
-<li>steamcmd</li>
-<li>a copy of brickadia</li>
+<li>a windows PC with at least of 8 GB of RAM (16 GB if you intend on using the same PC you play the game on)</li>
+<li>a copy of Brickadia</li>
 <li>ability to port forward udp port 7777</li>
 <li>a public IP address</li>
 </ul>
-<h2 id="instructions">Instructions<a class="headerlink" href="#instructions" title="Permanent link">&para;</a></h2>
+<h2 id="steam-dedicated-server-method">Steam Dedicated Server Method<a class="headerlink" href="#steam-dedicated-server-method" title="Permanent link">&para;</a></h2>
 <ol>
-<li>log in to your linux VM and install <a href="https://developer.valvesoftware.com/wiki/SteamCMD#Linux">steamcmd</a><ol>
-<li>note: if you prefer a distro agnostic method, just create a directory to hold steamcmd, <code>cd</code> into it, then run <code>curl -sqL "https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz" | tar zxvf -</code> to grab steamcmd. be sure to install the needed <code>lib32gcc-s1</code> library from your package manager. </li>
-</ol>
-</li>
-<li>create a new folder somewhere to house the game files. </li>
-<li>create a file called <code>update-brickadia.sh</code>, then run <code>chmod +x update-brickadia.sh</code> on it to make it executable. </li>
-<li>open the file with your favorite editor and put the following:
-<div class="highlight"><pre><span></span><code><span class="ch">#!/usr/bin/env bash</span>
-/path/to/steamcmd/steamcmd.sh<span class="w"> </span>+force_install_dir<span class="w"> </span>/your/install/directory<span class="w"> </span>+login<span class="w"> </span>anonymous<span class="w"> </span>+app_update<span class="w"> </span><span class="m">3017590</span>
-</code></pre></div><ul>
-<li>be sure to replace <code>/path/to/steamcmd/</code> with whatever path the steamcommand shell script lives at. </li>
-<li>also be sure to replace <code>/your/install/directory</code> with wherever you want the game files to live.</li>
+<li>sign in and open up Steam</li>
+<li>go to your Library</li>
+<li>in the upper left corner, choose <strong>Games and Software</strong>, then checkmark <strong>Tools</strong>
+<img alt="Enabling tools screenshot" src="../enable-tools.png" /></li>
+<li>scroll down or search for <strong>Brickadia</strong> in your steam library. You should now see two items:<ul>
+<li>Brickadia</li>
+<li>Brickadia Server
+</br><img alt="steam-search-screenshot" src="../brickadia-search.png" /></li>
 </ul>
 </li>
-<li>run the <code>update-brickadia.sh</code> script. It should install the brickadia server to the path you set above. You can re-use this script in the future to update the server when needed.</li>
-<li>once the download finishes, you'll be dropped to the steamcmd shell, you can just type <code>exit</code> here. </li>
-<li>inside of the install directory you set earlier, you will now have files. One of which is the folder <code>Brickadia</code></li>
-<li>go inside <code>Brickadia/Binaries/Linux</code>, and you should see the file <code>BrickadiaServer-Linux-Shipping</code>, this will be what we will use to launch the server in a bit. </li>
-<li>go to <a href="https://brickadia.com/account">https://brickadia.com/account</a> and login, then generate a server hosting token and copy this somewhere.</li>
-<li>back in the vm in the directory with the server launcher binary mentioned earlier, run the following command: <code>./BrickadiaServer-Linux-Shipping -log -port=7777 -token=yourTokenHere</code></li>
-<li>this will spin up the server, and after about 2 minutes it should be fully loaded.</li>
-<li>connect to your dedicated server via manual connection in game. then go to Menu -&gt; Edit Game and set up the server options and save them.</li>
-<li>in the linux environment, hit ctrl+c to stop the server.</li>
-<li>run <code>cd ~/.config/Epic/Brickadia/Saved/Config/LinuxServer</code> to drop into the folder  with the server config files.</li>
-<li>edit <code>GameUserSettings.ini</code>  to set your server name, password, etc until you are happy with it. </li>
-<li>verify in your network port <code>7777</code> udp is port forwarded so that others can connect. </li>
-<li>once the network is in place, go back to the directory with <code>BrickadiaServer-Linux-Shipping</code> in it. </li>
-<li>since we have already registered the token to the game server, we can now just run the server with <code>./BrickadiaServer-Linux-Shipping -port=7777 -log</code> going forward. Do this now. </li>
-<li>open up Brickadia and connect to your server by hitting Join Game -&gt; Connect Manually.</li>
-<li>you should now be connected, and the server is up!</li>
+<li>install the <strong>Brickadia Server</strong> item</li>
+<li>go to <a href="https://brickadia.com/account">https://brickadia.com/account</a> and login, then generate a server hosting token. copy this somewhere</li>
+<li>once the brickadia server is done installing, right click the Brickadia Server item, then choose <strong>Properties</strong></li>
+<li>be sure you have the <strong>General</strong> tab on the left selected</li>
+<li>under LAUNCH OPTIONS, put <code>-token=ReplaceMe</code>, then change the <code>ReplaceMe</code> to be the token you copied several steps earlier. You now should have a similar entry as the one pictured below.
+<img alt="steam launch options screenshot" src="../token-entry.png" /></li>
+<li>once you have entered this in, simply close the window using the X in the upper right corner</li>
+<li>now launch the brickadia server</li>
+<li>If done correctly, you should have a window like the following:
+<img alt="brickadia server window" src="../brickadia-terminal.png" /></li>
+<li>now launch your normal Brickadia game on the computer you will be playing from</li>
+<li>Click <strong>Join Game</strong> then <strong>Manual Connect</strong><ul>
+<li>If the brickadia server is on the same machine as the game, use the default 127.0.0.1 address to connect</li>
+<li>if the brickadia server is on a different machine, you will need to locate the IP address of the server,
+then fill out the IP address in the Manual Connect window</li>
+</ul>
+</li>
+<li>open up the game menu (This is usually bound to the Esc key)</li>
+<li>set your server info, description, password (if needed) and any other info. Then hit Save</li>
+<li>back at your brickadia server terminal window, type <code>exit</code> to exit the server. </li>
+<li>browse to <code>%localappdata%\Brickadia\Saved\Config\WindowsServer</code></li>
+<li>in this directory, review your server settings within this file.</li>
+<li>if all settings look good, save the file. </li>
+<li>verify now that you have port forwarded udp port 7777</li>
+<li>Start the Brickadia server again from Steam. </li>
 </ol>
 <h2 id="post-setup-configuration-tips">Post-Setup Configuration Tips<a class="headerlink" href="#post-setup-configuration-tips" title="Permanent link">&para;</a></h2>
 <h4 id="enable-auto-save">Enable Auto Save<a class="headerlink" href="#enable-auto-save" title="Permanent link">&para;</a></h4>
