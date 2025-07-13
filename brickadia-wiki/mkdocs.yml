@@ -65,6 +65,8 @@ nav:
   - Guides & Tutorials:
     - Linux Dedicated Server Setup: tutorials/linux-server-guide/guide.md
 
+  - FAQ: faq.md
+
   - Site Info:
     - About: about.md
     - Contributing: contributing.md
