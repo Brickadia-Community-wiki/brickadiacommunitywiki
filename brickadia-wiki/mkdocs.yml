@@ -1,0 +1,72 @@
+### Site Settings ###
+site_name: Brickadia Community Wiki
+#site_url: https://brickadia.wiki
+repo_name: Brickadia-Community-wiki
+repo_url: https://github.com/Brickadia-Community-wiki/brickadiacommunitywiki
+site_description: Brickadia Unofficial Community Wiki
+site_author: Brickadia Community
+
+### Copyright footer info ###
+copyright: The content of this wiki is created and maintained by the community and does not represent the official views, statements, or endorsements of Brickadia.
+  <div>All Brickadia artwork is attributed to <a href="https://brickadia.com">Brickadia</a> unless otherwise stated. 
+  <div>All trademarks are the property of their respective owners and are used in this document for descriptive purposes only, without any intention of infringement.
+
+### Theme settings ###
+theme:
+  name: material
+  #custom_dir: overrides # Needed for the overrides folder to take effect
+  logo: assets/images/brick-logo.png
+  palette:
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/lightbulb-auto
+        name: Switch to Light Mode
+
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: red
+      accent: red
+      toggle:
+        icon: material/lightbulb
+        name: Switch to Dark Mode
+
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: red
+      accent: red
+      toggle:
+        icon: material/lightbulb-outline
+        name: Switch to Auto
+
+### MkDoc extension loading ###
+markdown_extensions:
+  - attr_list
+  - md_in_html
+  - admonition
+  - tables
+  - pymdownx.details
+  - pymdownx.caret
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - toc:
+      permalink: true
+
+### Navigation Hierarchy ###
+### Add your .md files in this section ###
+nav:
+  - Home: index.md
+
+  - Server Hosting:
+    - Dedicated Servers: dedicated-servers.md
+ 
+  - Guides & Tutorials:
+    - Linux Dedicated Server Setup: tutorials/linux-server-guide/guide.md
+
+  - Site Info:
+    - About: about.md
+    - Contributing: contributing.md
+    - Report An Issue!: 'https://github.com/Brickadia-Community-wiki/brickadiacommunitywiki/issues'
+    - Privacy Policy: privacy-policy.md
