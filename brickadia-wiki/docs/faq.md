@@ -46,14 +46,11 @@ On Windows, `C:\Users\<yourusername>\AppData\Local\Brickadia\Saved\Config\Window
     - On Linux, `~/.config/Epic/Brickadia/Saved/Worlds`
     - On Windows, `C:\Users\<yourusername>\AppData\Local\Brickadia\Saved\Worlds`
 2. Drop the `.brdb` file in that directory.
-3. Run `BR.World.Load worldname` command without the file extension.
-    - For example, if your world is called `office.brdb`, you would run `BR.World.Load office` in the console.
+3. Run `BR.World.Load "worldname"` command without the file extension.
+    - For example, if your world is called `office world.brdb`, you would run `BR.World.Load "office world"` in the console.
 
 ## I just restarted my server and all my bricks are missing!
-Run `BR.World.Load worldname`. If you do not remember your world name, you can look for it in the worlds folder for your server.
-
-*Note*: If your world name has spaces in it, you need to use quotes for the command.
-For example, if your world is called `office space.brdb`, you would run `BR.World.Load "office space"`.
+Run `BR.World.Load "worldname"`. If you do not remember your world name, you can look for it in the worlds folder for your server.
 
 If there is no world in that directory, then you did not create a world save.
 
