@@ -14,7 +14,7 @@ copyright: The content of this wiki is created and maintained by the community a
 ### Theme settings ###
 theme:
   name: material
-  #custom_dir: overrides # Needed for the overrides folder to take effect
+  custom_dir: overrides # Needed for the overrides folder to take effect
   logo: assets/images/brick-logo.png
   palette:
     - media: "(prefers-color-scheme)"
@@ -59,13 +59,15 @@ markdown_extensions:
 nav:
   - Home: index.md
 
+  - FAQ: faq.md
+
   - Server Hosting:
     - Dedicated Servers: dedicated-servers.md
  
   - Guides & Tutorials:
     - Linux Dedicated Server Setup: tutorials/linux-server-guide/guide.md
+    - Windows Dedicated Server Setup: tutorials/windows-server-guide/guide.md
 
-  - FAQ: faq.md
 
   - Site Info:
     - About: about.md
