@@ -465,6 +465,30 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#post-setup-configuration-tips" class="md-nav__link">
+    <span class="md-ellipsis">
+      Post-Setup Configuration Tips
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Post-Setup Configuration Tips">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enable-auto-save" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enable Auto Save
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -662,6 +686,30 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#post-setup-configuration-tips" class="md-nav__link">
+    <span class="md-ellipsis">
+      Post-Setup Configuration Tips
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Post-Setup Configuration Tips">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enable-auto-save" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enable Auto Save
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -726,6 +774,19 @@
 <li>since we have already registered the token to the game server, we can now just run the server with <code>./BrickadiaServer-Linux-Shipping -port=7777 -log</code> going forward. Do this now. </li>
 <li>Open up Brickadia and connect to your server by hitting Join Game -&gt; Connect Manually</li>
 <li>you should now be connected, and the server is up!</li>
+</ol>
+<h2 id="post-setup-configuration-tips">Post-Setup Configuration Tips<a class="headerlink" href="#post-setup-configuration-tips" title="Permanent link">&para;</a></h2>
+<h4 id="enable-auto-save">Enable Auto Save<a class="headerlink" href="#enable-auto-save" title="Permanent link">&para;</a></h4>
+<ol>
+<li>In your server console, type <code>BR.World.SaveAs savename</code> (where savename is what you want the name of your save to be). This will create your save file for the server. <ul>
+<li>Note: If you do not run this command, the Auto Save won't function.</li>
+<li>If you already created a save file for your server, you can skip this step.</li>
+</ul>
+</li>
+<li>Connect to your server in game, press the escape key to open the menu -&gt; edit game</li>
+<li>Click the advanced settings toggle at the top left of the menu</li>
+<li>Scroll to the bottom and enable Auto Save. You can also configure save interval and announcing of the saves.</li>
+<li>Whenever you restart your server, you will need to run <code>BR.World.Load savename</code> to have the server reload the save file.</li>
 </ol>
 
 
