@@ -5,12 +5,13 @@ Instead, these are now downloaded either directly from steam or anonymously from
 
 Note that you will still need to supply the dedicated server a server hosting token by passing it the `-token=yourtokenhere` executable argument. Once the token is registered to the server for the first time, the `-token` argument can be omitted in future runs of the server executable. 
 
-Servers currently use **udp port 7777**
+Servers currently use **udp port 7777**. This can be changed if needed by supplying and modifying the `-port=7777` argument to your desired port. 
 
 ## Dedicated Server Commands
 These commands can be used directly in the terminal where the dedicated server is running. 
 
-- grant yourself or another player admin:
-    - `Chat.Command /GrantRole Admin [Your username here]`
-- Load a map from the installed map list:
-    - `BR.World.Load "map name"`
+
+| Description | Command |
+| ------------ | ------------- |
+| grant self/player admin | `Chat.Command /GrantRole Admin [Your username here]` |
+| Load map from mapfile name | `BR.World.Load "map name"` |
