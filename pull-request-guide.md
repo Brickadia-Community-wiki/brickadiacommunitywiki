@@ -20,7 +20,7 @@ Below is the general workflow that a pull request requires:
 
 ### Forking the GitHub Repository
 
-After one has signed into their GitHub account, you should now see a `Fork` button at the top right area on the [Brickadia Community Wiki](https://github.com/Brickadia-Community-wiki/brickadiacommunitywiki). 
+After one has signed into their GitHub account, you should now see a `Fork` button at the top right area on the [Brickadia Community Wiki](https://brickadia-community.github.io/communitywiki/). 
 To fork the Brickadia Community Wiki: do the following:
 
 1. Click the `Fork` button
@@ -41,7 +41,7 @@ You should now have your own copy of the wiki in your own repository to change a
 1. Open up a terminal on your PC (typically this will be Powershell or Bash depending on OS)
 1. `cd` into the easily accessible folder you created in the earlier step. 
 1. Type `git clone ` then paste the URL you copied earlier and press enter. The files should copy down
-    - the command should look like `git clone https://github.com/YourUserNameHere/brickadiacommunitywiki.git` assuming you kept the default name during the fork process.
+    - the command should look like `git clone https://github.com/YourUserNameHere/communitywiki.git` assuming you kept the default name during the fork process.
 
 ### Make your changes
 You are now ready to add to the wiki. 
@@ -60,7 +60,7 @@ We will also only want to add files we have added or changed, and nothing else.
 1. If everything looks correct, we are now ready to commit this. 
 1. Run `git commit -m "Your message here providing a short description of changes made"` to create a commit.
     - if this is your first time running git, it will prompt you about setting your name and email. You will need to set these to whatever you like (doesn't have to be real info if you do not desire it to be so). Just run the commands it provides to set your email and name, the re-run the commit command above. 
-1. We can now push this up to GitHub by running `git push origin master`
+1. We can now push this up to GitHub by running `git push origin main`
     - This should prompt git to ask you for your GitHub login username and password if it is your first time. Go ahead and enter this in.
 1. If all goes well, the command should complete without raising any errors.
 1. Verify your files are now on GitHub under your wiki repository on the website.
@@ -72,8 +72,8 @@ After making any needed commits to GitHub, you are now ready to create a Pull Re
 1. In the top left area, click the **Pull requests** tab
 1. On the right upper side, click **New pull request**
 1. At the top of this page, you will have an area that describes how the data to flow
-    - On the left, the base repository should be the main `Brickadia-Community-wiki/brickadiacommunitywiki` set to `master`
-    - On the right should be your repository for your copy of the wiki, also set to `master`
+    - On the left, the base repository should be the main `brickadia-community/communitywiki` set to `main`
+    - On the right should be your repository for your copy of the wiki, also set to `main`
 1. In the lower area of the screen, it will detail all changes made. read through these and verify the changes are what you expect
 1. If all items look correct, click **Create pull request** at the upper right corner.
 1. You will now be prompted to fill in a title for this change request, as well as a description
