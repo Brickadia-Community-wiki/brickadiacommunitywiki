@@ -2,7 +2,7 @@ name: Build MkDocs Pages
 on:
   push:
     branches:
-      - master
+      - main
     paths:
       - 'brickadia-wiki/**'
   workflow_dispatch:
