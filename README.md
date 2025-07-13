@@ -1,7 +1,7 @@
 # Brickadia Community Wiki
-This is the repo for the [Brickadia Community Wiki](https://brickadia-community-wiki.github.io).
+This is the repo for the [Brickadia Community Wiki](https://brickadia-community-wiki.github.io/brickadiacommunitywiki).
 If you'd like to contribute to this wiki, you may [fork the repo and offer your changes as a pull request](pull-request-guide.md).
-Please be sure submissions meet the [contribution guidelines](https://brickadia-community-wiki.github.io/contributing/).
+Please be sure submissions meet the [contribution guidelines](https://brickadia-community-wiki.github.io/brickadiacommunitywiki/contributing/).
 
 # Technical Info
 This wiki is built using the python based mkdocs builder utilizing the material theme (mkdocs-material).
