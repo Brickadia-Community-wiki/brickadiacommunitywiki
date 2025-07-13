@@ -7,6 +7,8 @@ Note that you will still need to supply the dedicated server a server hosting to
 
 Servers currently use **udp port 7777**. This can be changed if needed by supplying and modifying the `-port=7777` argument to your desired port. 
 
+In some circumstances (such as hosting multiple servers on the same host) you may wish to change the location of the Dedicated Server's `Saved` directory (`~/.config/Epic/Brickadia/` by default). This can be done using the `-UserDir=PathToSavedDir` argument.
+
 ## Dedicated Server Commands
 These commands can be used directly in the terminal where the dedicated server is running. 
 
@@ -15,3 +17,4 @@ These commands can be used directly in the terminal where the dedicated server i
 | ------------ | ------------- |
 | grant self/player admin | `Chat.Command /GrantRole Admin [Your username here]` |
 | Load map from mapfile name | `BR.World.Load "map name"` |
+| Get Server status | `Server.Status` |
