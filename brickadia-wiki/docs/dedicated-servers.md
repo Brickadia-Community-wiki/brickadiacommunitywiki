@@ -17,4 +17,12 @@ These commands can be used directly in the terminal where the dedicated server i
 | ------------ | ------------- |
 | grant self/player admin | `Chat.Command /GrantRole Admin [Your username here]` |
 | Load map from mapfile name | `BR.World.Load "map name"` |
+| Save map | `BR.World.Save` |
+| Save map as name | `BR.World.SaveAs YourSaveNameHere` |
 | Get Server status | `Server.Status` |
+
+
+## See Also
+
+- [Windows Server Guide](tutorials/windows-server-guide/guide.md)
+- [Linux Server Guide](tutorials/linux-server-guide/guide.md)
