@@ -961,7 +961,10 @@ to easily control and manage the Brickadia server. </p>
 <li>Type <code>/stop</code> to stop the server if it is running</li>
 <li>Install wsl2binds with <code>omegga install gh:Meshiest/wsl2binds</code></li>
 <li>Launch omegga once more with <code>omegga</code></li>
-<li>If you get a Windows Firewall prompt after starting the application, just click <code>Yes</code></li>
+<li>If you get a Windows Firewall prompt for udpprox.exe after starting the application, just click <code>Allow</code><ul>
+<li>If you need to connect from your computer to a different server running the omegga web UI, you may need to run the <em>netsh interface portproxy</em> command the tool generates in the console as admin to apply the needed connection rule. </li>
+</ul>
+</li>
 <li>Your omegga server will now display a usable web UI address you can open. </li>
 </ol>
 
