@@ -1,8 +1,8 @@
 # Omegga Brickadia Server Linux Setup Guide
-[Omegga](https://github.com/brickadia-community/omegga) is a project that wraps and extends the capabilities of a normal brickadia dedicated server by additionally providing the ability to run plugins as well as providing a nice web based UI
-to easily control and manage the brickadia server. 
+[Omegga](https://github.com/brickadia-community/omegga) is a project that wraps and extends the capabilities of a normal Brickadia dedicated server by additionally providing the ability to run plugins as well as providing a nice web based UI
+to easily control and manage the Brickadia server. 
 
-This guide aims to show how to do a basic install using Ubuntu Linunx. The extended install and troubleshooting guide [can be found on the main project page](https://github.com/brickadia-community/omegga?tab=readme-ov-file#quick-setup-automatically-download-launcher)
+This guide aims to show how to do a basic install using Ubuntu Linux. The extended install and troubleshooting guide [can be found on the main project page](https://github.com/brickadia-community/omegga?tab=readme-ov-file#quick-setup-automatically-download-launcher).
 
 ## What you will need
 ### Hardware
@@ -30,7 +30,7 @@ This guide aims to show how to do a basic install using Ubuntu Linunx. The exten
 1. The server will ask you whether you want to use username/password or hosting token authentication. Choose what you would prefer.
 1. Once entered, the server will start and will show the address of where to access the webUI. 
 
-**For WSL users, you ^^must to do the following^^ to access the web UI:**
+**For WSL users, you ^^must do the following^^ to access the web UI:**
 
 1. Type `/stop` to stop the server if it is running
 1. Install wsl2binds with `omegga install gh:Meshiest/wsl2binds`
