@@ -7,7 +7,7 @@ So you want to use a linux server but dont know where to start? This guide is fo
 You will need:
 
 - a linux X86_64 VM with a recent CPU with 2-4 cores
-- at least 6 GB of RAM. 
+- at least 2 GB of RAM. 
 - steamcmd
 - a copy of brickadia
 - ability to port forward udp port 7777
