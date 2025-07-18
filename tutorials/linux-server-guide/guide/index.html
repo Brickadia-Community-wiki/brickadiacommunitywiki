@@ -936,36 +936,36 @@
 </ul>
 <h2 id="instructions">Instructions<a class="headerlink" href="#instructions" title="Permanent link">&para;</a></h2>
 <ol>
-<li>log in to your linux VM and install <a href="https://developer.valvesoftware.com/wiki/SteamCMD#Linux">steamcmd</a><ol>
-<li>note: if you prefer a distro agnostic method, just create a directory to hold steamcmd, <code>cd</code> into it, then run <code>curl -sqL "https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz" | tar zxvf -</code> to grab steamcmd. be sure to install the needed <code>lib32gcc-s1</code> library from your package manager. </li>
+<li>Log in to your linux VM and install <a href="https://developer.valvesoftware.com/wiki/SteamCMD#Linux">steamcmd</a><ol>
+<li>Note: if you prefer a distro agnostic method, just create a directory to hold steamcmd, <code>cd</code> into it, then run <code>curl -sqL "https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz" | tar zxvf -</code> to grab steamcmd. be sure to install the needed <code>lib32gcc-s1</code> library from your package manager. </li>
 </ol>
 </li>
-<li>create a new folder somewhere to house the game files. </li>
-<li>create a file called <code>update-brickadia.sh</code>, then run <code>chmod +x update-brickadia.sh</code> on it to make it executable. </li>
-<li>open the file with your favorite editor and put the following:
+<li>Create a new folder somewhere to house the game files. </li>
+<li>Create a file called <code>update-brickadia.sh</code>, then run <code>chmod +x update-brickadia.sh</code> on it to make it executable. </li>
+<li>Open the file with your favorite editor and put the following:
 <div class="highlight"><pre><span></span><code><span class="ch">#!/usr/bin/env bash</span>
 /path/to/steamcmd/steamcmd.sh<span class="w"> </span>+force_install_dir<span class="w"> </span>/your/install/directory<span class="w"> </span>+login<span class="w"> </span>anonymous<span class="w"> </span>+app_update<span class="w"> </span><span class="m">3017590</span>
 </code></pre></div><ul>
-<li>be sure to replace <code>/path/to/steamcmd/</code> with whatever path the steamcommand shell script lives at. </li>
-<li>also be sure to replace <code>/your/install/directory</code> with wherever you want the game files to live.</li>
+<li>Be sure to replace <code>/path/to/steamcmd/</code> with whatever path the steamcommand shell script lives at. </li>
+<li>Also be sure to replace <code>/your/install/directory</code> with wherever you want the game files to live.</li>
 </ul>
 </li>
-<li>run the <code>update-brickadia.sh</code> script. It should install the brickadia server to the path you set above. You can re-use this script in the future to update the server when needed.</li>
-<li>once the download finishes, you'll be dropped to the steamcmd shell, you can just type <code>exit</code> here. </li>
-<li>inside of the install directory you set earlier, you will now have files. One of which is the folder <code>Brickadia</code></li>
-<li>go inside <code>Brickadia/Binaries/Linux</code>, and you should see the file <code>BrickadiaServer-Linux-Shipping</code>, this will be what we will use to launch the server in a bit. </li>
-<li>go to <a href="https://brickadia.com/account">https://brickadia.com/account</a> and login, then generate a server hosting token and copy this somewhere.</li>
-<li>back in the vm in the directory with the server launcher binary mentioned earlier, run the following command: <code>./BrickadiaServer-Linux-Shipping -log -port=7777 -token=yourTokenHere</code></li>
-<li>this will spin up the server, and after about 2 minutes it should be fully loaded.</li>
-<li>connect to your dedicated server via manual connection in game. then go to Menu -&gt; Edit Game and set up the server options and save them.</li>
-<li>in the linux environment, hit ctrl+c to stop the server.</li>
-<li>run <code>cd ~/.config/Epic/Brickadia/Saved/Config/LinuxServer</code> to drop into the folder  with the server config files.</li>
-<li>edit <code>GameUserSettings.ini</code>  to set your server name, password, etc until you are happy with it. </li>
-<li>verify in your network port <code>7777</code> udp is port forwarded so that others can connect. </li>
-<li>once the network is in place, go back to the directory with <code>BrickadiaServer-Linux-Shipping</code> in it. </li>
-<li>since we have already registered the token to the game server, we can now just run the server with <code>./BrickadiaServer-Linux-Shipping -port=7777 -log</code> going forward. Do this now. </li>
-<li>open up Brickadia and connect to your server by hitting Join Game -&gt; Connect Manually.</li>
-<li>you should now be connected, and the server is up!</li>
+<li>Run the <code>update-brickadia.sh</code> script. It should install the brickadia server to the path you set above. You can re-use this script in the future to update the server when needed.</li>
+<li>Once the download finishes, you'll be dropped to the steamcmd shell, you can just type <code>exit</code> here. </li>
+<li>Inside of the install directory you set earlier, you will now have files. One of which is the folder <code>Brickadia</code></li>
+<li>Go inside <code>Brickadia/Binaries/Linux</code>, and you should see the file <code>BrickadiaServer-Linux-Shipping</code>, this will be what we will use to launch the server in a bit. </li>
+<li>Go to <a href="https://brickadia.com/account">https://brickadia.com/account</a> and login, then generate a server hosting token and copy this somewhere.</li>
+<li>Back in the vm in the directory with the server launcher binary mentioned earlier, run the following command: <code>./BrickadiaServer-Linux-Shipping -log -port=7777 -token=yourTokenHere</code></li>
+<li>This will spin up the server, and after about 2 minutes it should be fully loaded.</li>
+<li>Connect to your dedicated server via manual connection in game. then go to Menu -&gt; Edit Game and set up the server options and save them.</li>
+<li>In the linux environment, hit ctrl+c to stop the server.</li>
+<li>Run <code>cd ~/.config/Epic/Brickadia/Saved/Config/LinuxServer</code> to drop into the folder  with the server config files.</li>
+<li>Edit <code>GameUserSettings.ini</code>  to set your server name, password, etc until you are happy with it. </li>
+<li>Verify in your network port <code>7777</code> udp is port forwarded so that others can connect. </li>
+<li>Once the network is in place, go back to the directory with <code>BrickadiaServer-Linux-Shipping</code> in it. </li>
+<li>Since we have already registered the token to the game server, we can now just run the server with <code>./BrickadiaServer-Linux-Shipping -port=7777 -log</code> going forward. Do this now. </li>
+<li>Open up Brickadia and connect to your server by hitting Join Game -&gt; Connect Manually.</li>
+<li>You should now be connected, and the server is up!</li>
 </ol>
 <h2 id="post-setup-configuration-tips">Post-Setup Configuration Tips<a class="headerlink" href="#post-setup-configuration-tips" title="Permanent link">&para;</a></h2>
 <h4 id="enable-auto-save">Enable Auto Save<a class="headerlink" href="#enable-auto-save" title="Permanent link">&para;</a></h4>
