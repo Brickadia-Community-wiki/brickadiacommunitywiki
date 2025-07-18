@@ -73,8 +73,9 @@ nav:
     - Gameplay Guides:
       - Basics of Vehicles: tutorials/basic-vehicle-guide/guide.md
     - Application Guides:
-      - Linux Dedicated Server Setup: tutorials/linux-server-guide/guide.md
       - Windows Dedicated Server Setup: tutorials/windows-server-guide/guide.md
+      - Omegga Linux Server Setup: tutorials/linux-server-guide/omegga-guide.md
+      - Linux Dedicated Server Setup: tutorials/linux-server-guide/guide.md
 
   - Site Info:
     - About: about.md
