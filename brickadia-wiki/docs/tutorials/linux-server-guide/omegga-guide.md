@@ -7,7 +7,7 @@ This guide aims to show how to do a basic install using Ubuntu Linunx. The exten
 ## What you will need
 ### Hardware
 - at least 2 CPU cores
-- at least 2 GB of RAM. 
+- at least 2 GB of RAM
 
 ### Software
 - a Linux server (either a physical server or a Windows 11 machine running WSL will work) with Ubuntu installed
