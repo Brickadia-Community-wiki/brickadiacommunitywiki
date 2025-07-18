@@ -636,30 +636,6 @@
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#instructions" class="md-nav__link">
-    <span class="md-ellipsis">
-      Instructions
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Instructions">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#windows-wsl-specific-instructions" class="md-nav__link">
-    <span class="md-ellipsis">
-      Windows WSL Specific Instructions
-    </span>
-  </a>
-  
-</li>
-        
           <li class="md-nav__item">
   <a href="#installation" class="md-nav__link">
     <span class="md-ellipsis">
@@ -912,30 +888,6 @@
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#instructions" class="md-nav__link">
-    <span class="md-ellipsis">
-      Instructions
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Instructions">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#windows-wsl-specific-instructions" class="md-nav__link">
-    <span class="md-ellipsis">
-      Windows WSL Specific Instructions
-    </span>
-  </a>
-  
-</li>
-        
           <li class="md-nav__item">
   <a href="#installation" class="md-nav__link">
     <span class="md-ellipsis">
@@ -977,38 +929,17 @@ to easily control and manage the brickadia server. </p>
 <h3 id="hardware">Hardware<a class="headerlink" href="#hardware" title="Permanent link">&para;</a></h3>
 <ul>
 <li>at least 2 CPU cores</li>
-<li>at least 6 GB of RAM. </li>
+<li>at least 2 GB of RAM. </li>
 </ul>
 <h3 id="software">Software<a class="headerlink" href="#software" title="Permanent link">&para;</a></h3>
 <ul>
 <li>a Linux server (either a physical server or a Windows 11 machine running WSL will work) with Ubuntu installed</li>
 <li>a user in the server who is <strong>NOT</strong> root. </li>
 </ul>
-<h2 id="instructions">Instructions<a class="headerlink" href="#instructions" title="Permanent link">&para;</a></h2>
-<h3 id="windows-wsl-specific-instructions">Windows WSL Specific Instructions<a class="headerlink" href="#windows-wsl-specific-instructions" title="Permanent link">&para;</a></h3>
-<p>If you are running this via Windows 11 WSL2, you will need to add a config to the Ubuntu WSL config for you to be able to access the Web UI via localhost if you have not enabled this in the past. </p>
-<ol>
-<li>Open Powershell</li>
-<li>
-<p>Add mirrored networking to the WSL system:</p>
-<div class="highlight"><pre><span></span><code>&quot;[wsl2]`nnetworkingMode=mirrored&quot; | Add-Content -Encoding ASCII -Path &quot;$env:USERPROFILE\.wslconfig&quot;
-</code></pre></div>
-</li>
-<li>
-<p>Turn off the WSL instance if it is running: <code>wsl --shutdown Ubuntu</code></p>
-</li>
-<li>Open the Ubuntu WSL app as normal, and it will start back up, then proceed with the install directions below. </li>
-</ol>
 <h3 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h3>
 <ol>
 <li>As mentioned above, verify you are not running as root and create a user if needed. </li>
-<li>
-<p>Add the needed repositories for steamcmd: </p>
-<p><code>sudo add-apt-repository multiverse; sudo dpkg --add-architecture i386; sudo apt update</code></p>
-</li>
-<li>
-<p>Install steamcmd: <code>sudo apt install steamcmd</code></p>
-</li>
+<li>install lib32gcc-s1: <code>sudo apt install lib32gcc-s1</code></li>
 <li>
 <p>Install nvm:</p>
 <p><code>curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash</code></p>
@@ -1019,10 +950,19 @@ to easily control and manage the brickadia server. </p>
 <li>Install node v24: <code>nvm install 24</code></li>
 <li>Install Omegga: <code>npm i -g omegga</code></li>
 <li>Create a directory for the server to live in: <code>mkdir omegga-server</code></li>
-<li>Navigate into the folder: <code>cd omegga server</code></li>
-<li>Run omegga: <code>omegga</code> and it will generate server files in the directory you are currently in, and press <code>Y</code> to the steamcmd reference request</li>
-<li>The server will ask you whether you want to use username/password or hosting token authentication. Choose what you would prefer</li>
-<li>Once entered, the server will start, then it will show the address of where to access the webUI. </li>
+<li>Navigate into the folder: <code>cd omegga-server</code></li>
+<li>Run omegga: <code>omegga</code> and it will generate server files in the directory you are currently in</li>
+<li>Press <code>Y</code> to install steamcmd</li>
+<li>The server will ask you whether you want to use username/password or hosting token authentication. Choose what you would prefer.</li>
+<li>Once entered, the server will start and will show the address of where to access the webUI. </li>
+</ol>
+<p><strong>For WSL users, you <ins>must to do the following</ins> to access the web UI:</strong></p>
+<ol>
+<li>Type <code>/stop</code> to stop the server if it is running</li>
+<li>Install wsl2binds with <code>omegga install gh:Meshiest/wsl2binds</code></li>
+<li>Launch omegga once more with <code>omegga</code></li>
+<li>if you get a Windows Firewall prompt after starting the application, just click <code>Yes</code></li>
+<li>Your omegga server will now display a usable web UI address you can open. </li>
 </ol>
 
 
