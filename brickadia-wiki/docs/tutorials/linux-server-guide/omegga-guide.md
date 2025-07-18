@@ -15,7 +15,7 @@ This guide aims to show how to do a basic install using Ubuntu Linunx. The exten
 
 ### Installation
 1. As mentioned above, verify you are not running as root and create a user if needed. 
-1. install lib32gcc-s1: `sudo apt install lib32gcc-s1`
+1. Install lib32gcc-s1: `sudo apt install lib32gcc-s1`
 1. Install nvm:
 
     `curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash`
@@ -35,5 +35,5 @@ This guide aims to show how to do a basic install using Ubuntu Linunx. The exten
 1. Type `/stop` to stop the server if it is running
 1. Install wsl2binds with `omegga install gh:Meshiest/wsl2binds`
 1. Launch omegga once more with `omegga`
-1. if you get a Windows Firewall prompt after starting the application, just click `Yes`
+1. If you get a Windows Firewall prompt after starting the application, just click `Yes`
 1. Your omegga server will now display a usable web UI address you can open. 
