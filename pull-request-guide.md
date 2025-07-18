@@ -24,7 +24,7 @@ After one has signed into their GitHub account, you should now see a `Fork` butt
 To fork the Brickadia Community Wiki: do the following:
 
 1. Click the `Fork` button
-1. be sure the Owner is set to your own account
+1. Be sure the Owner is set to your own account
 1. Either leave the Repository Name as default, or change it to your liking. 
 1. Be sure "Copy the `master` branch only" is selected
 1. Click "Create Fork"
@@ -41,7 +41,7 @@ You should now have your own copy of the wiki in your own repository to change a
 1. Open up a terminal on your PC (typically this will be Powershell or Bash depending on OS)
 1. `cd` into the easily accessible folder you created in the earlier step. 
 1. Type `git clone ` then paste the URL you copied earlier and press enter. The files should copy down
-    - the command should look like `git clone https://github.com/YourUserNameHere/communitywiki.git` assuming you kept the default name during the fork process.
+    - The command should look like `git clone https://github.com/YourUserNameHere/communitywiki.git` assuming you kept the default name during the fork process.
 
 ### Make your changes
 You are now ready to add to the wiki. 
@@ -72,13 +72,13 @@ After making any needed commits to GitHub, you are now ready to create a Pull Re
 1. In the top left area, click the **Pull requests** tab
 1. On the right upper side, click **New pull request**
 1. At the top of this page, you will have an area that describes how the data to flow
-    - On the left, the base repository should be the main `brickadia-community/communitywiki` set to `main`
-    - On the right should be your repository for your copy of the wiki, also set to `main`
+    - on the left, the base repository should be the main `brickadia-community/communitywiki` set to `main`
+    - on the right should be your repository for your copy of the wiki, also set to `main`
 1. In the lower area of the screen, it will detail all changes made. read through these and verify the changes are what you expect
 1. If all items look correct, click **Create pull request** at the upper right corner.
 1. You will now be prompted to fill in a title for this change request, as well as a description
     - make the title a very short summary of what you are wanting to add/change
-    - Fill in the description area with any other information that may be beneficial for the reviewer to know. 
+    - fill in the description area with any other information that may be beneficial for the reviewer to know. 
 1. Once info has been filled in, simply click **Create pull request** 
 
 You have now completed your first pull request! Your submission will then be evaluated and if everything looks correct, added to the wiki!

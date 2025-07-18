@@ -11,36 +11,36 @@ You will need:
 
 ## Steam Dedicated Server Method
 
-1. sign in and open up Steam
-1. go to your Library
-1. in the upper left corner, choose **Games and Software**, then checkmark **Tools**
+1. Sign in and open up Steam
+1. Go to your Library
+1. In the upper left corner, choose **Games and Software**, then checkmark **Tools**
 ![Enabling tools screenshot](enable-tools.png)
 1. scroll down or search for **Brickadia** in your steam library. You should now see two items:
     - Brickadia
     - Brickadia Server
 </br>![steam-search-screenshot](brickadia-search.png)
-1. install the **Brickadia Server** item
-1. go to <https://brickadia.com/account> and login, then generate a server hosting token. copy this somewhere
-1. once the brickadia server is done installing, right click the Brickadia Server item, then choose **Properties**
-1. be sure you have the **General** tab on the left selected
-1. under LAUNCH OPTIONS, put `-token=ReplaceMe`, then change the `ReplaceMe` to be the token you copied several steps earlier. You now should have a similar entry as the one pictured below.
+1. Install the **Brickadia Server** item
+1. Go to <https://brickadia.com/account> and login, then generate a server hosting token. copy this somewhere
+1. Once the brickadia server is done installing, right click the Brickadia Server item, then choose **Properties**
+1. Be sure you have the **General** tab on the left selected
+1. Under LAUNCH OPTIONS, put `-token=ReplaceMe`, then change the `ReplaceMe` to be the token you copied several steps earlier. You now should have a similar entry as the one pictured below.
 ![steam launch options screenshot](token-entry.png)
-1. once you have entered this in, simply close the window using the X in the upper right corner
-1. now launch the brickadia server
+1. Once you have entered this in, simply close the window using the X in the upper right corner
+1. Now launch the brickadia server
 1. If done correctly, you should have a window like the following:
 ![brickadia server window](brickadia-terminal.png)
-1. now launch your normal Brickadia game on the computer you will be playing from
+1. Now launch your normal Brickadia game on the computer you will be playing from
 1. Click **Join Game** then **Manual Connect**
-    - If the brickadia server is on the same machine as the game, use the default 127.0.0.1 address to connect
+    - If the brickadia server is on the same machine as the game, use the default 127.0.0.1 address to connect.
     - if the brickadia server is on a different machine, you will need to locate the IP address of the server,
-    then fill out the IP address in the Manual Connect window
-1. open up the game menu (This is usually bound to the Esc key)
-1. set your server info, description, password (if needed) and any other info. Then hit Save
-1. back at your brickadia server terminal window, type `exit` to exit the server. 
-1. browse to `%localappdata%\Brickadia\Saved\Config\WindowsServer`
-1. in this directory, review your server settings within this file.
-1. if all settings look good, save the file. 
-1. verify now that you have port forwarded udp port 7777
+    then fill out the IP address in the Manual Connect window.
+1. Open up the game menu (This is usually bound to the Esc key)
+1. Set your server info, description, password (if needed) and any other info. Then hit Save
+1. Back at your brickadia server terminal window, type `exit` to exit the server. 
+1. Browse to `%localappdata%\Brickadia\Saved\Config\WindowsServer`
+1. In this directory, review your server settings within this file.
+1. If all settings look good, save the file. 
+1. Verify now that you have port forwarded udp port 7777
 1. Start the Brickadia server again from Steam. 
 
 ## Post-Setup Configuration Tips

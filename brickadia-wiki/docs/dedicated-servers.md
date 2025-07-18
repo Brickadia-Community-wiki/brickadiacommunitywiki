@@ -26,3 +26,4 @@ These commands can be used directly in the terminal where the dedicated server i
 
 - [Windows Server Guide](tutorials/windows-server-guide/guide.md)
 - [Linux Server Guide](tutorials/linux-server-guide/guide.md)
+- [Omegga Linux Server Guide](tutorials/linux-server-guide/omegga-guide.md)
