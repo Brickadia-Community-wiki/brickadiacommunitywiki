@@ -35,5 +35,6 @@ This guide aims to show how to do a basic install using Ubuntu Linux. The extend
 1. Type `/stop` to stop the server if it is running
 1. Install wsl2binds with `omegga install gh:Meshiest/wsl2binds`
 1. Launch omegga once more with `omegga`
-1. If you get a Windows Firewall prompt after starting the application, just click `Yes`
+1. If you get a Windows Firewall prompt for udpprox.exe after starting the application, just click `Allow`
+    - If you need to connect from your computer to a different server running the omegga web UI, you may need to run the *netsh interface portproxy* command the tool generates in the console as admin to apply the needed connection rule. 
 1. Your omegga server will now display a usable web UI address you can open. 
